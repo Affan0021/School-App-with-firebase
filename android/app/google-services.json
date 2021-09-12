@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "527817910051",
+    "project_id": "fast-app-4663b",
+    "storage_bucket": "fast-app-4663b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:527817910051:android:a9c4cf8ab9bb1906854e96",
+        "android_client_info": {
+          "package_name": "com.fast"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "527817910051-88scpe2v4bd7rbe6tmqkqcnc5r7ms0on.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.fast",
+            "certificate_hash": "492e622fd822a5d4df7837aa662f27bcf86a05c1"
+          }
+        },
+        {
+          "client_id": "527817910051-cj8maemm0c4vd49k7uvt76dsdeir276d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrkomPObxNzJ6yJFB2i2sR4AZrPfNokIg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "527817910051-cj8maemm0c4vd49k7uvt76dsdeir276d.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 
+import 'main.dart';
+import 'student.dart';
+
 
 
 class NavBar extends StatelessWidget {
@@ -42,6 +45,7 @@ class NavBar extends StatelessWidget {
             ),
 
           ),
+
           ListTile(
             leading: Icon(
               Icons.home,
@@ -60,7 +64,13 @@ class NavBar extends StatelessWidget {
               ),
 
             ),
-            onTap: () => null,
+              onTap: ()
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Main()),
+                );
+              }
           ),
 
           ListTile(
@@ -81,7 +91,13 @@ class NavBar extends StatelessWidget {
               ),
 
             ),
-            onTap: () => null,
+            onTap: ()
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Student()),
+                );
+              }
           ),
 
           ListTile(

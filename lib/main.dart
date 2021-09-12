@@ -2,7 +2,11 @@ import 'package:flutter/material.dart';
 import 'sidebar.dart';
 import 'package:flutter/services.dart';
 
-void main()
+import 'package:firebase_auth/firebase_auth.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'signin.dart';
+
+void main() async
 {
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle(
 
@@ -10,10 +14,11 @@ void main()
 
   )
   );
+  WidgetsFlutterBinding.ensureInitialized();
+   await Firebase.initializeApp();
   runApp(MaterialApp(
 
-
-    home: Main(),
+    home: Login(),
   ));
 
 }
@@ -38,7 +43,7 @@ class _MainState extends State<Main> {
          drawer: new NavBar(),
         appBar: AppBar(
           backgroundColor: Colors.indigo,
-          title: Text('\t\t\t\t  Welcome to Fast',
+          title: Text('\t\t\t\t      \t\t  Home',
             style: TextStyle(
 
               color: Colors.white,
@@ -88,6 +93,131 @@ class _MainState extends State<Main> {
               Column(
                 children: [
 
+                  SizedBox(
+                    height: height/17,
+                  ),
+                  Container(
+                    margin:  const EdgeInsets.fromLTRB(10, 0, 130,0),
+                    width: MediaQuery.of(context).size.width/1.5,
+                    height:MediaQuery.of(context).size.height/18,
+                    color: Colors.transparent,
+                    child: const Text(
+                      'Congratulations',
+                      style: TextStyle(
+
+                        color: Colors.redAccent,
+                        fontFamily: 'OpenSans',
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold,
+
+
+                      ),
+
+
+                    ),
+
+
+
+                  ),
+
+                  // SizedBox(
+                  //   height: height/20,
+                  // ),
+                  Container(
+                    margin:  const EdgeInsets.fromLTRB(10, 0, 0,0),
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height/18,
+                    color: Colors.transparent,
+                    child: Text(
+                      'You are Successfully Logged in',
+                      style: TextStyle(
+
+                        color: Colors.white,
+                        fontFamily: 'OpenSans',
+                        fontSize: 20.0,
+                        fontWeight: FontWeight.bold,
+
+
+                      ),
+
+
+                    ),
+
+                  ),
+
+                  SizedBox(
+                    height: height/17,
+                  ),
+
+                  Container(
+                    margin:  const EdgeInsets.fromLTRB(0, 0, 0, 0),
+                    width: MediaQuery.of(context).size.width/2,
+                    height:MediaQuery.of(context).size.height/4,
+                    // color: Colors.orangeAccent,
+                    decoration:   BoxDecoration(
+                      image:  const DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage('assets/nu.png'),
+
+                      ),
+
+
+                    ),
+
+                  ),
+
+                  SizedBox(
+
+                    height: height/16,
+                  ),
+
+                  Container(
+                    margin:  const EdgeInsets.fromLTRB(10, 0, 130,0),
+                    width: MediaQuery.of(context).size.width/1.5,
+                    height:MediaQuery.of(context).size.height/18,
+                    color: Colors.transparent,
+                    child: const Text(
+                      'Welcome',
+                      style: TextStyle(
+
+                        color: Colors.red,
+                        fontFamily: 'OpenSans',
+                        fontSize: 30.0,
+                        fontWeight: FontWeight.bold,
+
+
+                      ),
+
+
+                    ),
+
+
+
+                  ),
+
+                  Container(
+                    margin:  const EdgeInsets.fromLTRB(10, 0, 0,0),
+                    width: MediaQuery.of(context).size.width,
+                    height: MediaQuery.of(context).size.height/4,
+                    color: Colors.transparent,
+                    child: Text(
+                      'FAST is one of the Top IT Institute of Pakistan Offering BS , M-Phil and PHD Degrees in Computer Science , Bussiness Administration , Software Engineering and Electrical Engineering',
+
+
+                      style: TextStyle(
+
+                        color: Colors.white,
+                        fontFamily: 'OpenSans',
+                        fontSize: 18.0,
+                        fontWeight: FontWeight.bold,
+
+
+                      ),
+
+
+                    ),
+
+                  ),
 
 
                 ],
