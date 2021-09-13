@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'sidebar.dart';
 import 'package:flutter/services.dart';
 
+import 'package:animated_splash_screen/animated_splash_screen.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'signin.dart';
@@ -17,8 +18,17 @@ void main() async
   WidgetsFlutterBinding.ensureInitialized();
    await Firebase.initializeApp();
   runApp(MaterialApp(
+    home: AnimatedSplashScreen(
+      splash: Image.asset(
+        'assets/nuces.png',
 
-    home: Login(),
+      ),
+      splashIconSize: 200,
+
+      nextScreen: Login(),
+      splashTransition: SplashTransition.rotationTransition,
+      duration: 300,
+    ),
   ));
 
 }
@@ -69,7 +79,7 @@ class _MainState extends State<Main> {
           ),
         ),
 
-        body: Container(
+        body: SingleChildScrollView(
 
         child: Stack(
             children: <Widget>[

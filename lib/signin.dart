@@ -1,6 +1,7 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
+import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 
@@ -68,8 +69,8 @@ class _LoginState extends State<Login> {
 
                       Container(
                         margin:  const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        width: MediaQuery.of(context).size.width/2,
-                        height:MediaQuery.of(context).size.height/4,
+                        width: MediaQuery.of(context).size.width/1.85,
+                        height:MediaQuery.of(context).size.height/3.7,
                         decoration:   BoxDecoration(
                           image:  const DecorationImage(
                             fit: BoxFit.cover,
@@ -92,7 +93,7 @@ class _LoginState extends State<Login> {
 
                         width: MediaQuery.of(context).size.width/1.3,
                         height: MediaQuery.of(context).size.height/15,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: EdgeInsets.only(left: 10),
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
 
@@ -134,7 +135,7 @@ class _LoginState extends State<Login> {
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.black26,
-                            width: 1 ,
+                            width: 0.7 ,
                           ),
                           borderRadius: BorderRadius.circular(20),
                           // color: const Color(0xff7cb1b6),
@@ -154,7 +155,8 @@ class _LoginState extends State<Login> {
 
                         width: MediaQuery.of(context).size.width/1.3,
                         height: MediaQuery.of(context).size.height/15,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: EdgeInsets.only(left: 10),
+
                         child: TextField(
                           obscureText: true,
                           style: TextStyle(
@@ -165,7 +167,7 @@ class _LoginState extends State<Login> {
                           ),
                           decoration: InputDecoration(
                             border: InputBorder.none,
-                            contentPadding: const EdgeInsets.only(top: 11.0),
+                            // contentPadding: const EdgeInsets.only(top: 11.0),
                             prefixIcon: Icon(
                               Icons.lock,
                               color: Colors.blue,
@@ -195,7 +197,7 @@ class _LoginState extends State<Login> {
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.black26,
-                            width: 1,
+                            width: 0.7,
                           ),
                           borderRadius: BorderRadius.circular(20),
                           // color: const Color(0xff7cb1b6),
@@ -214,7 +216,7 @@ class _LoginState extends State<Login> {
                       Container(
                           width: MediaQuery.of(context).size.width/2.5,
                           height: MediaQuery.of(context).size.height/18,
-                          margin: const EdgeInsets.only(left: 35.0),
+                          margin: const EdgeInsets.only(left: 20.0),
                           child: ElevatedButton(
 
                             onPressed: (){
@@ -257,58 +259,58 @@ class _LoginState extends State<Login> {
                       ),
 
                       SizedBox(
-                        height: height/ 110,
+                        height: height/ 13,
                       ),
 
+                          Row(
+                            children: [
+                              SizedBox(
 
+                                width: width /6,
+                              ),
+                            Container(
+                              // margin:EdgeInsets.only(left: 100),
+                              child: Text(
+                                'Create an account?',
+                                style: TextStyle(
+                                  color: Colors.black,
+                                  fontFamily: 'OpenSans',
+                                  fontSize: 20.0,
+                                  fontWeight: FontWeight.bold,
+                                ),
+                              ),
+                            ),
+                              SizedBox(
 
-                          Container(
-                              width: MediaQuery.of(context).size.width/2.1,
-                              height: MediaQuery.of(context).size.height/18,
-                              // margin: const EdgeInsets.only(left: 15.0),
-                              child: ElevatedButton(
-                                onPressed: ()
+                                width: width / 115,
+                              ),
+                              Container(
+                                  child: TextButton(
+                                    onPressed: ()
 
-                                {
-                                  Navigator.push(
-                                    context,
-                                    MaterialPageRoute(builder: (context) => Signup()),
-                                  );
+                                    {
+                                      Navigator.push(
+                                        context,
+                                        MaterialPageRoute(builder: (context) => Signup()),
+                                      );
 
-                                },
-
-
-                                style: ButtonStyle(
-
-                                  backgroundColor: MaterialStateProperty.resolveWith<Color>(
-                                        (Set<MaterialState> states) {
-                                      if (states.contains(MaterialState.pressed))
-                                        return Colors.white;
-                                      return Colors.indigoAccent;
                                     },
-                                  ),
-                                  shape:
-                                  MaterialStateProperty.all<RoundedRectangleBorder>(
-                                      RoundedRectangleBorder(
-                                          borderRadius: BorderRadius.circular(30.0),
-                                          side: BorderSide(
-                                              color: Colors.white)
-                                      )
-                                  ),
+                                    child: Text(
+                                      '\tSign up',
+                                      style: TextStyle(
+                                        color: Colors.red,
+                                        fontFamily: 'OpenSans',
+                                        fontSize: 20.0,
+                                        fontWeight: FontWeight.bold,
+                                      ),
+                                    ),
+                                  )
+                              ),
 
-                                ),
-
-                                child: Text(
-                                  '\tSign up',
-                                  style: TextStyle(
-                                    color: Colors.white,
-                                    fontFamily: 'OpenSans',
-                                    fontSize: 15.0,
-                                    fontWeight: FontWeight.bold,
-                                  ),
-                                ),
-                              )
+                            ],
                           ),
+
+
 
 
                       //

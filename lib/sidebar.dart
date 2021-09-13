@@ -1,12 +1,18 @@
 import 'package:flutter/material.dart';
 
+import 'package:firebase_core/firebase_core.dart';
+import 'package:firebase_auth/firebase_auth.dart';
 import 'main.dart';
+import 'signin.dart';
+import 'staff.dart';
 import 'student.dart';
+import 'teacher.dart';
 
 
 
 class NavBar extends StatelessWidget {
   @override
+  final auth = FirebaseAuth.instance;
 
   Widget build(BuildContext context) {
 
@@ -113,7 +119,13 @@ class NavBar extends StatelessWidget {
 
 
               ),),
-            onTap: () => null,
+            onTap: ()
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Teacher()),
+                );
+              }
           ),
           ListTile(
             leading: Icon(Icons.people,
@@ -128,7 +140,13 @@ class NavBar extends StatelessWidget {
 
 
               ),),
-            onTap: () => null,
+              onTap: ()
+              {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => Staff()),
+                );
+              }
           ),
           ListTile(
             leading: Icon(Icons.insert_photo,
@@ -179,7 +197,16 @@ class NavBar extends StatelessWidget {
 
 
               ),),
-            onTap: () => null,
+            onTap: ()
+              {
+                  auth.signOut();
+                  Navigator.push(
+                    context,
+                    MaterialPageRoute(builder: (context) => Login()),
+                  );
+
+              }
+
           ),
         ],
       ),

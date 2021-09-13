@@ -68,9 +68,11 @@ class _SignupState extends State<Signup> {
 
 
                       Container(
-                        margin:  const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        width: MediaQuery.of(context).size.width/2,
-                        height:MediaQuery.of(context).size.height/4,
+
+                        // alignment: Alignment.center,
+                        width: MediaQuery.of(context).size.width/1.85,
+                        height:MediaQuery.of(context).size.height/3.7,
+                        margin:  EdgeInsets.only(left: 50),
                         decoration:   BoxDecoration(
                           image:  const DecorationImage(
                             fit: BoxFit.cover,
@@ -94,7 +96,7 @@ class _SignupState extends State<Signup> {
                       Container(
                         width: MediaQuery.of(context).size.width/1.3,
                         height: MediaQuery.of(context).size.height/15,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: EdgeInsets.only(left: 50),
                         child: TextField(
                           keyboardType: TextInputType.emailAddress,
                           style: TextStyle(
@@ -135,7 +137,7 @@ class _SignupState extends State<Signup> {
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.black26,
-                            width: 1,
+                            width: 0.7,
                           ),
                           borderRadius: BorderRadius.circular(20),
                           // color: const Color(0xff7cb1b6),
@@ -154,7 +156,7 @@ class _SignupState extends State<Signup> {
                       Container(
                         width: MediaQuery.of(context).size.width/1.3,
                         height: MediaQuery.of(context).size.height/15,
-                        margin: EdgeInsets.only(left: 30),
+                        margin: EdgeInsets.only(left: 50),
                         child: TextField(
                           obscureText: true,
                           style: TextStyle(
@@ -195,7 +197,7 @@ class _SignupState extends State<Signup> {
                         decoration: BoxDecoration(
                           border: Border.all(
                             color: Colors.black26,
-                            width: 1,
+                            width: 0.7,
                           ),
                           borderRadius: BorderRadius.circular(20),
                           // color: const Color(0xff7cb1b6),
