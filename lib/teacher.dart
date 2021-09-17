@@ -95,8 +95,10 @@ class _TeacherState extends State<Teacher> {
         drawer: new NavBar(),
         appBar: AppBar(
           backgroundColor: Colors.indigo,
+          centerTitle: true,
+
           title: Text(
-            '\t\t\t\t      \t\tTeacher',
+            'Teacher',
             style: TextStyle(
               color: Colors.white,
               fontFamily: 'OpenSans',
@@ -127,16 +129,14 @@ class _TeacherState extends State<Teacher> {
                       ),
                       Container(
                         margin:  const EdgeInsets.fromLTRB(10, 0, 0, 0),
-                        width: MediaQuery.of(context).size.width/1.85,
+                        width: MediaQuery.of(context).size.width/1.79,
                         height:MediaQuery.of(context).size.height/3.7,
-                        decoration:   BoxDecoration(
-                          image:  const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/logo.png'),
-
+                        child : CircleAvatar(
+                          child: ClipOval(
+                            child: Image.asset(
+                                'assets/logo.png',
+                            ),
                           ),
-
-
                         ),
 
                       ),

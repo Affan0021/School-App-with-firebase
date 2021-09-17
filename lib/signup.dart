@@ -70,17 +70,15 @@ class _SignupState extends State<Signup> {
                       Container(
 
                         // alignment: Alignment.center,
-                        width: MediaQuery.of(context).size.width/1.85,
+                        width: MediaQuery.of(context).size.width/1.79,
                         height:MediaQuery.of(context).size.height/3.7,
                         margin:  EdgeInsets.only(left: 50),
-                        decoration:   BoxDecoration(
-                          image:  const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/logo.png'),
-
+                        child : CircleAvatar(
+                          child: ClipOval(
+                            child: Image.asset(
+                                'assets/logo.png',
+                            ),
                           ),
-
-
                         ),
 
                       ),

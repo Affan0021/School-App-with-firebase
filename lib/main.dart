@@ -24,7 +24,6 @@ void main() async
 
       ),
       splashIconSize: 200,
-
       nextScreen: Login(),
       splashTransition: SplashTransition.rotationTransition,
       duration: 300,
@@ -53,9 +52,9 @@ class _MainState extends State<Main> {
          drawer: new NavBar(),
         appBar: AppBar(
           backgroundColor: Colors.indigo,
-          title: Text('\t\t\t\t      \t\t  Home',
-            style: TextStyle(
-
+          centerTitle: true,
+          title: Text(' Home',
+             style: TextStyle(
               color: Colors.white,
               fontFamily: 'OpenSans',
               fontSize: 27.0,
@@ -160,21 +159,19 @@ class _MainState extends State<Main> {
                   ),
 
                   Container(
-                    margin:  const EdgeInsets.fromLTRB(0, 0, 0, 0),
-                    width: MediaQuery.of(context).size.width/2,
-                    height:MediaQuery.of(context).size.height/4,
-                    // color: Colors.orangeAccent,
-                    decoration:   BoxDecoration(
-                      image:  const DecorationImage(
-                        fit: BoxFit.cover,
-                        image: AssetImage('assets/nu.png'),
-
+                    margin:  const EdgeInsets.fromLTRB(10, 0, 0, 0),
+                    width: MediaQuery.of(context).size.width/1.79,
+                    height:MediaQuery.of(context).size.height/3.7,
+                    child : CircleAvatar(
+                      child: ClipOval(
+                        child: Image.asset(
+                          'assets/logo.png',
+                        ),
                       ),
-
-
                     ),
 
                   ),
+
 
                   SizedBox(
 

@@ -69,16 +69,14 @@ class _LoginState extends State<Login> {
 
                       Container(
                         margin:  const EdgeInsets.fromLTRB(30, 0, 0, 0),
-                        width: MediaQuery.of(context).size.width/1.85,
+                        width: MediaQuery.of(context).size.width/1.79,
                         height:MediaQuery.of(context).size.height/3.7,
-                        decoration:   BoxDecoration(
-                          image:  const DecorationImage(
-                            fit: BoxFit.cover,
-                            image: AssetImage('assets/logo.png'),
-
+                        child : CircleAvatar(
+                          child: ClipOval(
+                            child: Image.asset(
+                              'assets/logo.png',
+                            ),
                           ),
-
-
                         ),
 
                       ),

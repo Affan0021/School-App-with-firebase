@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'contact.dart';
 import 'main.dart';
 import 'signin.dart';
 import 'staff.dart';
@@ -148,20 +149,6 @@ class NavBar extends StatelessWidget {
                 );
               }
           ),
-          ListTile(
-            leading: Icon(Icons.insert_photo,
-              color: Colors.blue,),
-            title: Text('Gallery',
-              style: TextStyle(
-
-                color: Colors.black,
-                fontFamily: 'OpenSans',
-                fontSize: 20.0,
-                fontWeight: FontWeight.bold,
-
-
-              ),),
-          ),
            ListTile(
             leading: Icon(Icons.contacts,
               color: Colors.blue,
@@ -176,11 +163,17 @@ class NavBar extends StatelessWidget {
 
 
               ),),
-            onTap: () => null,
+               onTap: ()
+               {
+                 Navigator.push(
+                   context,
+                   MaterialPageRoute(builder: (context) => Contact()),
+                 );
+               }
           ),
 
           SizedBox(
-            height: height / 6,
+            height: height / 12,
           ),
           ListTile(
             leading: Icon(
